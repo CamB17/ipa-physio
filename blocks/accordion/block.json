@@ -1,0 +1,30 @@
+{
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "accordion.php"
+  },
+  "category": "custom",
+  "description": "A custom accordion block that uses ACF fields.",
+  "icon": "button",
+  "keywords": [],
+  "name": "acf/accordion",
+  "supports": {
+    "align": true,
+    "anchor": true,
+    "color": {
+      "background": true,
+      "gradients": false,
+      "link": false,
+      "text": true
+    },
+    "reusable": true,
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "ipa-physio",
+  "title": "IPA Accordion",
+  "version": "1.0.0"
+}

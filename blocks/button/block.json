@@ -1,0 +1,30 @@
+{
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "button.php"
+  },
+  "category": "custom",
+  "description": "A custom button block that uses ACF fields.",
+  "icon": "button",
+  "keywords": [],
+  "name": "acf/button",
+  "supports": {
+    "align": true,
+    "anchor": true,
+    "color": {
+      "background": true,
+      "gradients": false,
+      "link": false,
+      "text": true
+    },
+    "reusable": true,
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "ipa-physio",
+  "title": "IPA Button",
+  "version": "1.0.0"
+}

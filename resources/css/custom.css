@@ -1,0 +1,247 @@
+@layer base {
+    h1, h2, h3, h4, h5, h6 {
+        @apply font-made_mirage;
+    }
+
+    p, li {
+
+        font-family: "Inter", sans-serif;
+        font-optical-sizing: auto;
+        font-weight: 300;
+        font-style: normal;
+
+    }
+
+}
+
+@layer utilities {
+.purple {
+    color: #3B5795;
+}
+
+    .mt-negative {
+        margin-top: -28px;
+    }
+
+    .mb-negative {
+        margin-bottom: 0;
+    }
+}
+
+@layer components {
+    .button {
+        @apply rounded-full inline-block px-16 py-4 uppercase tracking-widest bg-primary !text-white font-semibold transition-colors hover:bg-black !no-underline;
+
+        &-white {
+            @apply bg-white !text-black hover:bg-gray-100;
+        }
+    }
+
+
+    #menu-primary-navigation {
+        > li {
+            > a {
+                @apply uppercase font-semibold;
+            }
+        }
+    }
+
+    /*Services SLider*/
+    .services-swiper {
+        padding-left: 13%;
+        padding-right: 13%;
+        overflow: visible;
+        position: relative;
+    }
+
+    .stories-swiper {
+        padding-left: 10%;
+        padding-right: 10%;
+        overflow: visible;
+        position: relative;
+    }
+
+    .services-swiper .swiper-slide {
+        width: auto;
+    }
+
+    .swiper-button-next, .swiper-button-prev {
+        color: white;
+        background: #3B5795;
+        border-radius: 9999px;
+        padding: 20px;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        z-index: 10;
+    }
+
+    .swiper-button-prev {
+        left: 10px;
+    }
+
+    .swiper-button-next {
+        right: 10px;
+    }
+
+    .swiper-button-prev:after,
+    .swiper-button-next:after {
+        color: white !important;
+        font-size: 20px !important;
+    }
+
+    .services-pagination .swiper-pagination-bullet {
+        background: #ffffff;
+        border: 2px solid #3B5795;
+        width: 12px;
+        height: 12px;
+        opacity: 1;
+    }
+
+    .services-pagination .swiper-pagination-bullet-active {
+        background: #3B5795;
+        border: 2px solid #3B5795;
+    }
+
+    .accordion .accordion-content {
+        display: none;
+    }
+
+    .accordion p {
+        @apply text-lg pb-3;
+    }
+
+    .accordion h3 {
+        @apply font-semibold text-xl pb-3 pt-2.5 relative items-center;
+        border-top: 2px solid #3B5795;;
+    }
+
+    .accordion h3::after {
+        content: "";
+        background-image: url('../../img/accordion-arrow.svg');
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 19px;
+        height: 16px;
+        position: absolute;
+        right: 0;
+        top: 50%;
+        transform: translateY(-50%) rotate(0deg);
+        transition: transform 0.25s;
+    }
+
+    .accordion .accordion-item.active h3::after {
+        transform: translateY(-50%) rotate(180deg);
+    }
+
+    .accordion .accordion-item.active .accordion-content {
+        display: block;
+    }
+
+}
+
+.opacity-0 {
+    opacity: 0;
+}
+
+/* Existing Animation Classes */
+.slide-in-left,
+.slide-in-right,
+.slide-in-bottom {
+    transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.slide-in-bottom-2s {
+    transition: transform 2s ease-out, opacity 1s ease-out;
+}
+
+.slide-in-bottom-1500ms {
+    transition: transform 1500ms ease-out, opacity 1s ease-out;
+}
+
+.delay-animate-slide-in-bottom {
+    animation: slide-in-bottom 2s ease-out forwards;
+}
+
+.animate-slide-in-left {
+    animation: slide-in-left 1s ease-out forwards;
+}
+
+.animate-slide-in-right {
+    animation: slide-in-right 1s ease-out forwards;
+}
+
+.animate-slide-in-bottom {
+    animation: slide-in-bottom 1s ease-out forwards;
+}
+
+/* Keyframe for Sliding Down from the Top */
+@keyframes slide-in-top {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+.card {
+    padding: 15px 20px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+
+/* Animation Class for Slide Down from the Top */
+.animate-slide-in-top {
+    animation: slide-in-top 1s ease-out forwards;
+}
+
+
+/* Delay Variations */
+.delay-animate-slide-in-top-1500ms {
+    animation: slide-in-bottom 1.5s ease-out forwards;
+}
+
+.delay-animate-slide-in-top-2s {
+    animation: slide-in-bottom 2s ease-out forwards;
+}
+
+.delay-animate-slide-in-top-1250ms {
+    animation: slide-in-bottom 1.25s ease-out forwards;
+}
+
+
+.entry-content, .block-editor-block-list__layout {
+    p, ul, ol {
+        a {
+            @apply text-blue-500 underline;
+
+            &:hover {
+                @apply no-underline;
+            }
+        }
+
+        @apply mb-4;
+    }
+
+    ul:not(.block-editor-block-variation-picker__variations) {
+        li {
+            @apply list-disc list-inside;
+        }
+    }
+
+    ol {
+        li {
+            @apply list-decimal list-inside;
+        }
+    }
+}
+
+/*This fixes the default ul where text wraps under the bullet*/
+.entry-content ul:not(.block-editor-block-variation-picker__variations) li {
+    list-style-position: outside;
+    margin-left: 20px;
+}

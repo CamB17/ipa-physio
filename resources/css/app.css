@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@import "custom.css";
+
+@font-face {
+    font-family: 'made_mirage';
+    src: url('./../fonts/made_mirage/made_mirage_thin_personal_use-webfont.woff2') format('woff2'),
+    url('./../fonts/made_mirage/made_mirage_thin_personal_use-webfont.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'made_mirage';
+    src: url('./../fonts/made_mirage/made_mirage_black_personal_use-webfont.woff2') format('woff2'),
+    url('./../fonts/made_mirage/made_mirage_black_personal_use-webfont.woff') format('woff');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'made_mirage';
+    src: url('./../fonts/made_mirage/made_mirage_bold_personal_use-webfont.woff2') format('woff2'),
+    url('./../fonts/made_mirage/made_mirage_bold_personal_use-webfont.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+
+}
+
+@font-face {
+    font-family: 'made_mirage';
+    src: url('./../fonts/made_mirage/made_mirage_regular_personal_use-webfont.woff2') format('woff2'),
+    url('./../fonts/made_mirage/made_mirage_regular_personal_use-webfont.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}

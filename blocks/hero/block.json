@@ -1,0 +1,30 @@
+{
+  "acf": {
+    "mode": "auto",
+    "renderTemplate": "hero.php"
+  },
+  "category": "custom",
+  "description": "A custom hero block that uses ACF fields.",
+  "icon": "cover-image",
+  "keywords": [],
+  "name": "acf/hero",
+  "supports": {
+    "align": true,
+    "anchor": true,
+    "color": {
+      "background": true,
+      "gradients": false,
+      "link": false,
+      "text": true
+    },
+    "reusable": true,
+    "spacing": {
+      "blockGap": true,
+      "margin": true,
+      "padding": true
+    }
+  },
+  "textdomain": "ipa-physio",
+  "title": "IPA Hero",
+  "version": "1.0.0"
+}
